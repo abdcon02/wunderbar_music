@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wunderbar TEST</title>
+        <script src="https://developer.relayr.io/relayr-browser-sdk.min.js"></script>
+    </head>
+    <body>
+        <p> Hello World </p>
+    </body>
+</html>
+
+<script>
+var relayr = RELAYR.init({
+  appId: "a0105207-93f0-4c20-9473-95772fb89ad3"
+});
+//If you have a token and your device ID, you can start listening to your device
+//without going through the login process
+relayr.devices().getDeviceData({
+  token: "-MT-Hfsw2aiW9eV4xv-QkKCfl8HGNelV",
+  deviceId:"ba764167-3458-4a8b-8131-34b8421ff481",
+  incomingData: function(data){
+    console.log("data from device", data)
+  }
+});
+</script>
