@@ -3,29 +3,27 @@
     <head>
         <title>Wunderbar Development</title>
         <script src="https://developer.relayr.io/relayr-browser-sdk.min.js"></script>
-        <script src="controllers/BarController.js"></script>
+        <script src="js/scripts.js"></script>
     </head>
     <body>
         <p>RAD MUSIC!</p>
+        <p>
+          PROX: <span id="prox_sensor"></span>
+        </p>
     </body>
 </html>
 
-<script>
-var relayr = RELAYR.init({
-  appId: "a0105207-93f0-4c20-9473-95772fb89ad3"
-});
-//If you have a token and your device ID, you can start listening to your device
-//without going through the login process
-relayr.devices().getDeviceData({
-  token: "-MT-Hfsw2aiW9eV4xv-QkKCfl8HGNelV",
-  deviceId:"13788e39-27f7-4742-8085-87bb04d89438",
-  incomingData: function(data){
-    console.log("data from device", data)
-  }
 
-});
-</script>
-
-
-<script id="13788e39-27f7-4742-8085-87bb04d89438">var sId="13788e39-27f7-4742-8085-87bb04d89438",iframe=document.createElement("iframe");iframe.src="http://developer.relayr.io/snippet/#a7ec1b21-8582-4304-b1cf-15a1fc66d1e8/c6ed9918-34f1-497f-9b7b-bb83bc67830f:3b383d97-8287-4a95-8bc6-c4cfeb5ddc6a/ABtKwnEYSxkt/!v1!c0c8045b-622b-40ec-bb72-9384c206a3e2";iframe.style.width="250";iframe.style.height="600";iframe.id="s-"+sId;iframe.frameBorder=0;iframe.scrolling="no";document.body.appendChild(iframe);document.getElementById(""+sId).parentNode.appendChild(iframe);function aSize(a,b){document.getElementById("s-"+b).style.height=a+"px"};
+<script id="13788e39-27f7-4742-8085-87bb04d89438">
+var sId="13788e39-27f7-4742-8085-87bb04d89438",
+iframe=document.createElement("iframe");
+iframe.src="http://developer.relayr.io/snippet/#a7ec1b21-8582-4304-b1cf-15a1fc66d1e8/c6ed9918-34f1-497f-9b7b-bb83bc67830f:3b383d97-8287-4a95-8bc6-c4cfeb5ddc6a/ABtKwnEYSxkt/!v1!c0c8045b-622b-40ec-bb72-9384c206a3e2";
+iframe.style.width="250";
+iframe.style.height="600";
+iframe.id="s-"+sId;
+iframe.frameBorder=0;
+iframe.scrolling="no";
+document.body.appendChild(iframe);
+document.getElementById(""+sId).parentNode.appendChild(iframe);
+function aSize(a,b){document.getElementById("s-"+b).style.height=a+"px"};
 </script>
