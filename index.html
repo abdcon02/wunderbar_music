@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Wunderbar TEST</title>
+        <title>Wunderbar Development</title>
         <script src="https://developer.relayr.io/relayr-browser-sdk.min.js"></script>
+        <script src="controllers/BarController.js"></script>
     </head>
     <body>
         <p>RAD MUSIC!</p>
@@ -21,5 +22,6 @@ relayr.devices().getDeviceData({
   incomingData: function(data){
     console.log("data from device", data)
   }
+
 });
 </script>
