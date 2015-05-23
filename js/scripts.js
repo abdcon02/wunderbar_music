@@ -4,7 +4,7 @@ var prox = 0;
 var relayr = RELAYR.init({
   appId: "a0105207-93f0-4c20-9473-95772fb89ad3"
 });
-
+// Relay for proximity, light sensor
 relayr.devices().getDeviceData({
     token: "-MT-Hfsw2aiW9eV4xv-QkKCfl8HGNelV",
     deviceId:"13788e39-27f7-4742-8085-87bb04d89438",
@@ -19,7 +19,7 @@ relayr.devices().getDeviceData({
 
     }
 });
-
+// Relay for sound sensor
 relayr.devices().getDeviceData({
   token: "-MT-Hfsw2aiW9eV4xv-QkKCfl8HGNelV",
   deviceId:"13504694-4cf9-4ba2-8ce6-d5b3a9ef556b",
