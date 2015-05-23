@@ -3,10 +3,9 @@ var prox = 0;
 //RELAYR STUFF
 var relayr = RELAYR.init({
   appId: "a0105207-93f0-4c20-9473-95772fb89ad3"
-  });
-  //If you have a token and your device ID, you can start listening to your device
-  //without going through the login process
-  relayr.devices().getDeviceData({
+});
+
+relayr.devices().getDeviceData({
     token: "-MT-Hfsw2aiW9eV4xv-QkKCfl8HGNelV",
     deviceId:"13788e39-27f7-4742-8085-87bb04d89438",
     incomingData: function(data){
@@ -20,7 +19,16 @@ var relayr = RELAYR.init({
 
     }
 });
-      console.log("prox: ", prox);
+
+relayr.devices().getDeviceData({
+  token: "-MT-Hfsw2aiW9eV4xv-QkKCfl8HGNelV",
+  deviceId:"13504694-4cf9-4ba2-8ce6-d5b3a9ef556b",
+  incomingData: function(data){
+    console.log("data from device", data)
+  }
+});
+
+
 
 
 //MUSIC STUFF
