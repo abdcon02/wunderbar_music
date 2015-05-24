@@ -10,10 +10,12 @@
 
         <button onclick='playAudio()'>PLAY</button>
         <button onclick='pauseAudio()'>STOP</button>
-
+        <button onclick='increaseVolume()'>LOUDER</button>
+        <button onclick='decreaseVolume()'>NOT LOUDER</button>
 
         <p>
-          PROX: <span id="prox_sensor"></span>
+          PROX: <span id="prox_sensor"></span> </br>
+          Volume: <span id="volume_level"></span>
         </p>
     </body>
 </html>
@@ -37,5 +39,13 @@ function aSize(a,b){document.getElementById("s-"+b).style.height=a+"px"};
 iframe=document.createElement("iframe");iframe.src="http://developer.relayr.io/snippet/#4f38b6c6-a8e9-4f93-91cd-2ac4064b7b5a/c6ed9918-34f1-497f-9b7b-bb83bc67830f:3b383d97-8287-4a95-8bc6-c4cfeb5ddc6a/ABtKwnEYSxkt/!v1!e97dce2a-6fa6-4613-b864-697bc348efdd";iframe.style.width="250";
 iframe.style.height="600";iframe.id="s-"+sId;iframe.frameBorder=0;iframe.scrolling="no";
 document.body.appendChild(iframe);document.getElementById(""+sId).parentNode.appendChild(iframe);
+function aSize(a,b){document.getElementById("s-"+b).style.height=a+"px"};
+</script>
+
+<script id="2eb07c01-7579-4316-a2e3-124cad0ec1d3">var sId="2eb07c01-7579-4316-a2e3-124cad0ec1d3",
+iframe=document.createElement("iframe");iframe.src="http://developer.relayr.io/snippet/#173c44b5-334e-493f-8eb8-82c8cc65d29f/c6ed9918-34f1-497f-9b7b-bb83bc67830f:3b383d97-8287-4a95-8bc6-c4cfeb5ddc6a/ABtKwnEYSxkt/!v1!b95ed2d8-fc33-40dd-863e-0ec4cb81edfa";
+iframe.style.width="250";iframe.style.height="600";iframe.id="s-"+sId;iframe.frameBorder=0;
+iframe.scrolling="no";document.body.appendChild(iframe);
+document.getElementById(""+sId).parentNode.appendChild(iframe);
 function aSize(a,b){document.getElementById("s-"+b).style.height=a+"px"};
 </script>

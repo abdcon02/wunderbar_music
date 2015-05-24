@@ -24,7 +24,23 @@ relayr.devices().getDeviceData({
   token: "-MT-Hfsw2aiW9eV4xv-QkKCfl8HGNelV",
   deviceId:"13504694-4cf9-4ba2-8ce6-d5b3a9ef556b",
   incomingData: function(data){
-    console.log("data from device", data)
+    // console.log("data from device", data)
+  }
+});
+
+// Relay for gyro sensor
+relayr.devices().getDeviceData({
+  token: "-MT-Hfsw2aiW9eV4xv-QkKCfl8HGNelV",
+  deviceId:"2eb07c01-7579-4316-a2e3-124cad0ec1d3",
+  incomingData: function(data){
+    var gyro_value = data.readings[0].value.z;
+    document.getElementById('volume_level').textContent = audio.volume;
+
+    if (gyro_value > 20 && audio.volume <= 0.7) {
+        increaseVolume();
+    } else if (gyro_value < -20 && audio.volume >= 0.3) {
+        decreaseVolume();
+    }
   }
 });
 
@@ -51,9 +67,17 @@ function toggleAudio() {
 }
 
 function pauseAudio(){
-audio.pause();
+    audio.pause();
 };
 
 function playAudio(){
-audio.play();
+    audio.play();
 };
+
+function increaseVolume(){
+    audio.volume += 0.2;
+}
+
+function decreaseVolume(){
+    audio.volume -= 0.2;
+}
