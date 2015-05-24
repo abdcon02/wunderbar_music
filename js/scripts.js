@@ -24,7 +24,8 @@ relayr.devices().getDeviceData({
   token: "-MT-Hfsw2aiW9eV4xv-QkKCfl8HGNelV",
   deviceId:"13504694-4cf9-4ba2-8ce6-d5b3a9ef556b",
   incomingData: function(data){
-    // console.log("data from device", data)
+    var loudness = data.readings[0].value;
+    console.log(loudness);
   }
 });
 
